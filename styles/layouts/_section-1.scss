@@ -1,0 +1,65 @@
+.section-1 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background: $white1;
+
+  @media screen and (max-width: 680px) {
+    grid: none;
+  }
+
+  .intro-text {
+    margin: 15px;
+    padding: 30px 15px;
+    border: 1px dashed $brown1;
+    text-align: center;
+
+    h2 {
+      @include title-allura;
+      font-size: 2.5rem;
+      font-weight: 550;
+    }
+
+    h3 {
+      @include title-poppins;
+      font-size: 1.5rem;
+      line-height: 7px;
+    }
+
+    img {
+      margin: 25px;
+      border-radius: 100px;
+    }
+
+    p {
+      font-family: $font3;
+    }
+
+    img:nth-of-type(2) {
+      border-radius: 100px;
+      width: 70px;
+      height: auto;
+    }
+
+    h4 {
+      font-family: $font2;
+      font-weight: 500;
+    }
+
+    h5 {
+      font-family: $font3;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: rgba(128, 128, 128, 0.7);
+    }
+  }
+
+  .intro-pic {
+    background: url(../img/store-01.jpg) center/cover;
+    max-width: 100%;
+
+    @media screen and (max-width: 680px) {
+      display: none;
+    }
+  }
+}

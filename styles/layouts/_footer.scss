@@ -1,0 +1,99 @@
+footer {
+  background: url(../img/bg-footer.jpg) center/cover;
+  text-align: left;
+  color: $white1;
+  font-family: $font3;
+  padding: 30px;
+
+  @media screen and (max-width: 680px) {
+    background: none;
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    @media screen and (max-width: 680px) {
+      grid: none;
+    }
+
+    .footer-left {
+      padding: 40px 30px 40px 70px;
+
+      @media screen and (max-width: 680px) {
+        display: none;
+      }
+
+      h2 {
+        @include title-allura;
+        font-size: 2rem;
+        font-weight: 500;
+      }
+
+      p {
+        font-size: 0.9rem;
+        line-height: 2;
+      }
+    }
+
+    .footer-right {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      align-items: center;
+      padding: 40px 30px;
+
+      h3 {
+        @include title-poppins;
+        font-size: 0.9rem;
+        font-weight: 400;
+        margin: 10px 0;
+      }
+      input {
+        background: none;
+        border: 1px solid grey;
+        padding: 3px 10px;
+        width: 50%;
+
+        @media screen and (max-width: 680px) {
+          padding: 5px 13px;
+          width: 65%;
+        }
+
+        &:focus {
+          color: $white1;
+        }
+      }
+
+      .following {
+        display: flex;
+
+        @media screen and (max-width: 680px) {
+          margin-top: 35px;
+        }
+
+        ul {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          color: grey;
+          margin-left: 8px;
+          width: 40%;
+
+          @media screen and (max-width: 680px) {
+            width: 60%;
+          }
+
+          li {
+            font-size: 0.9rem;
+            transition: 0.2s ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+              transform: scale(1.2);
+            }
+          }
+        }
+      }
+    }
+  }
+}

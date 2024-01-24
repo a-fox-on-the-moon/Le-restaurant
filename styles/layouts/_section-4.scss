@@ -1,0 +1,143 @@
+.section-4 {
+  margin: 60px auto;
+  max-width: 1000px;
+
+  @media screen and (max-width: 680px) {
+    display: none;
+  }
+
+  h2 {
+    @include title-allura;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 22px;
+  }
+
+  h4 {
+    @include title-poppins;
+    font-size: 1.8rem;
+    color: $white1;
+  }
+
+  img {
+    margin: 30px 0;
+  }
+
+  .event-grid {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "a b" "c b";
+    gap: 20px;
+
+    .date-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background: $black1;
+      height: 86px;
+      width: 86px;
+      margin: 0 auto;
+      line-height: 22px;
+
+      h6 {
+        font-family: $font3;
+        color: $white1;
+        font-size: 1.7rem;
+      }
+
+      span {
+        font-family: $font3;
+        color: $white1;
+      }
+    }
+
+    .address {
+      background: $white1;
+
+      h3 {
+        font-family: $font3;
+        font-size: 1.3rem;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        padding-left: 8px;
+      }
+
+      p {
+        font-family: $font3;
+        color: grey;
+        font-size: 0.9rem;
+        margin-top: 20px;
+        letter-spacing: 1px;
+      }
+
+      i {
+        margin-right: 3px;
+        font-size: 0.7rem;
+        transform: translateY(-2px);
+
+        &:nth-child(2) {
+          margin-left: 10px;
+        }
+      }
+
+      button {
+        letter-spacing: 1px;
+        font-size: 0.9rem;
+        margin-top: 20px;
+      }
+    }
+
+    .event-left {
+      display: grid;
+      grid-template-columns: 39% 61%;
+      text-align: left;
+
+      .date {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .address {
+        padding: 30px 20px;
+      }
+    }
+
+    .event-1 {
+      grid-area: a;
+
+      .date {
+        background: url(../img/event-01.jpg) center/cover;
+      }
+    }
+
+    .event-2 {
+      grid-area: c;
+
+      .date {
+        background: url(../img/event-02.jpg) center/cover;
+      }
+    }
+
+    .event-3 {
+      grid-area: b;
+      background: url(../img/event-03.jpg) center/cover;
+      padding: 25px;
+
+      .address {
+        height: 100%;
+        padding: 0 12px;
+
+        h3 {
+          margin: 40px 0 15px;
+        }
+
+        button {
+          margin: 50px 0;
+        }
+      }
+    }
+  }
+}

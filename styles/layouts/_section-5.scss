@@ -1,0 +1,65 @@
+.section-5 {
+  position: relative;
+  padding: 70px 0 230px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: url(../img/gmap.jpg) center/cover;
+    height: 350px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+  }
+
+  .quote-container {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: $white1;
+    font-family: $font3;
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 65px 70px;
+    box-shadow: 0 0 3px #333;
+
+    &:before {
+      content: "";
+      position: absolute;
+      background: url(../img/avatar-02.jpg) center/cover;
+      border-radius: 50px;
+      height: 60px;
+      width: 60px;
+      top: -30px;
+      left: 50;
+      transform: translateX(-50);
+    }
+
+    .quote-text {
+      line-height: 2;
+      text-align: center;
+      margin: 0;
+
+      &::before {
+        content: "❝";
+      }
+
+      &::after {
+        content: "❞";
+      }
+    }
+  }
+
+  h3 {
+    margin: 30px 0 15px;
+    font-weight: 500;
+  }
+
+  p {
+    color: $brown1;
+  }
+}
